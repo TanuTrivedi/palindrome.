@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function reverseNumber(num){
+            const reversed =parseInt(num.toString().split('').reverse().join(''));
+            return reversed;   
+        }
+        function isPalindrome(num){
+            if(num<0)
+            return false;
+        const reversedNum=reverseNumber(num);
+        return num === reversedNum;
+        }
+        const number=parseInt(prompt("enter a number to check if it's a palindrome:"))
+        if(isPalindrome(number)){
+            document.write(`${number}is a palindrome.`);
+            alert(`${number}is a palindrome.`);
+        }
+        else{
+            document.write(`${number}is not a palindrome.`);
+            alert(`${number}is not a palindrome.`);
+        }
+
+    </script>
+</body>
+</html>
